@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>About - POS System</title>
+    <title>Customer Accounts - POS System</title>
 
     <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
 </head>
@@ -22,25 +22,34 @@
     </nav>
 
     <main class="container">
-        <h1 class="page-title">About</h1>
-        <p class="subtitle">Learn more about this project.</p>
+        <h1 class="page-title">Customer Accounts</h1>
+        <p class="subtitle">View the registered customer accounts.</p>
 
-        <section class="card">
-            <p>
-                This is a basic Point-of-Sale system created using
-                CodeIgniter 4.
-            </p>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
 
-            <p>
-                This first version demonstrates routing, controllers,
-                views, static PHP arrays, and displaying data using
-                foreach loops.
-            </p>
-        </section>
+                <tbody>
+                    <?php foreach ($customers as $customer): ?>
+                        <tr>
+                            <td><?= esc($customer['full_name']) ?></td>
+                            <td><?= esc($customer['email']) ?></td>
+                            <td><?= esc($customer['phone']) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; <?= date('Y') ?> POS System</p>
+        <p>&copy; <?= date('Y') ?> POS System | Elliesha Emina SD Pascual | TC37 </p>
     </footer>
 
 </body>

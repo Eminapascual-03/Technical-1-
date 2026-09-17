@@ -40,7 +40,7 @@
     </main>
 
     <footer>
-        <p>&copy; <?= date('Y') ?> POS System</p>
+        <p>&copy; <?= date('Y') ?> POS System | Elliesha Emina SD Pascual | TC37 </p>
     </footer>
 
 </body>
